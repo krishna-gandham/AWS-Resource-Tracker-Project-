@@ -1,0 +1,20 @@
+#########################
+#Author:krishna
+#date:27/12/2025
+#AWS RESOURCE USAGE 
+######################### 
+
+
+set -x
+#list S3 Buckets
+echo "list of s3 buckets"  #we can comment the echo because we have set-x its optional 
+aws s3 ls
+#list of lambda
+echo "list of lambda functions"
+aws lambda list-functions
+#lis of iam users 
+echo "list of iam users"
+aws iam list-users
+#list of ec2 instances 
+echo "list of ec2 buckets"
+aws ec2 describe-instances | jq '.Reservations[].Instances.InstanceId
